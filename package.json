@@ -10,6 +10,8 @@
     "@types/node": "^16.18.113",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
+    "axios": "^1.7.7",
+    "eslint": "^8.57.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -39,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-router-dom": "^7.1.5"
   }
 }
