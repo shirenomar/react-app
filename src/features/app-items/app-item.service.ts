@@ -1,16 +1,16 @@
 import axios, { AxiosResponse } from "axios";
-import { Item } from "./item-model";
+import { Item, Products } from "./item-model";
 
-const API_URL = "https://jsonplaceholder.typicode.com/posts";
+const API_URL = "https://dummyjson.com/products";
 
 //const  headers = { Authorization: 'Bearer your-token' };
 
-const read = (id: string = ""): Promise<AxiosResponse<Item[]>> => {
-  return axios.get<Item[]>(`${API_URL}/${id}`);
+const read = (id: string = ""): Promise<AxiosResponse<Products>> => {
+  return axios.get<Products>(`${API_URL}/${id}`);
 };
 
 const insert = (item: Item): Promise<AxiosResponse<Item[]>> => {
-  return axios.post(API_URL, item);
+  return axios.post(`${API_URL}/add`, item);
 };
 
 const update = (item: Item): Promise<AxiosResponse<Item[]>> => {

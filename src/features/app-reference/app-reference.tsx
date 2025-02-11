@@ -28,6 +28,17 @@ function HandleChange(event: React.ChangeEvent<HTMLInputElement>) {
   setValue(event.currentTarget.value);
 }
 
+// useEffect(() => {
+//   // API returning an array of Item
+//   AppItemsService.read()
+//     .then((response) => {
+//       setItems(response.data);
+//     })
+//     .catch((error) => {
+//       alert(error.message);
+//     });
+// }, []);
+
 const PRODUCTS = [
   { id: "1", category: "Fruits", price: "$1", stocked: true, name: "Apple" },
   {
