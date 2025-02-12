@@ -13,8 +13,10 @@ export default function App() {
           <Route
             path="/"
             element={
-              <div className="App">
-                <h1>My First API Call in React</h1>
+              <div className="flex justify-center items-center h-screen bg-blue-500">
+                <h1 className="text-3xl font-bold underline bg-red-50">
+                  My First API Call in React
+                </h1>
                 <Layout />
               </div>
             }

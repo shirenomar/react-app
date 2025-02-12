@@ -4,6 +4,7 @@ import { Item } from "./item-model";
 import { useState } from "react";
 import AppItemsService from "./app-item.service";
 import { useMutation, useQuery, useQueryClient } from "react-query";
+import { Button, RedButton } from "../../global-utilis";
 
 function ItemList() {
   // const [items, setItems] = useState<Item[]>([]);
@@ -71,19 +72,19 @@ function ItemList() {
         onChange={handleInputChange}
         title="title"
       />
-      <button
+      <Button
         onClick={() => newItem && createNew()}
         disabled={addItemMutation.isLoading}
       >
         Create
-      </button>
+      </Button>
       <h2>List of Items</h2>
       <ul>
         {data?.map((item) => (
           <div>
             <li key={item.id}>{item.title}</li>
-            <button onClick={() => AppItemsService.update(item)}>Update</button>
-            <button onClick={() => removeItem(item.id)}>Delete</button>
+            <Button onClick={() => AppItemsService.update(item)}>Update</Button>
+            <RedButton onClick={() => removeItem(item.id)}>Delete</RedButton>
           </div>
         ))}
       </ul>
